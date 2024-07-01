@@ -1,14 +1,14 @@
 import "./App.css";
 import "normalize.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavbarComponent from "./components/NavbarComponent";
-import Header from "./components/Header";
+// import NavbarComponent from "./components/NavbarComponent";
+import Header from "./components/Header.tsx";
 
 function App() {
 	return (
 		<>
 			<Header></Header>
-			<NavbarComponent></NavbarComponent>
+			{/* <NavbarComponent></NavbarComponent> */}
 		</>
 	);
 }
