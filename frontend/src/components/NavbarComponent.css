@@ -1,0 +1,14 @@
+nav > * {
+	font-family: "Helvetica Narrow", "Arial Narrow", Tahoma, Arial, Helvetica,
+		sans-serif;
+}
+.navbar-collapse {
+	max-width: 800px;
+}
+.nav-link {
+	color: text-primary-emphasis;
+	text-transform: capitalize;
+}
+.nav-link:hover {
+	color: white;
+}
