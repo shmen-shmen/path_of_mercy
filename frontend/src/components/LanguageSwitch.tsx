@@ -14,7 +14,7 @@ export function LanguageSwitch(): JSX.Element {
 				return (
 					<ToggleButton
 						key={key + "-selector"}
-						className={`btn-xs btn-outline-primary bg-${
+						className={`btn-xs fs-7 btn-outline-primary bg-${
 							radioValue === key ? "primary" : "transparent"
 						}`}
 						id={"langToggle" + key}
