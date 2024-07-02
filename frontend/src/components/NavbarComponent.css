@@ -2,3 +2,8 @@ nav > * {
 	font-family: "Helvetica Narrow", "Arial Narrow", Tahoma, Arial, Helvetica,
 		sans-serif;
 }
+
+.btn-xs {
+	padding: 2px;
+	font-size: 15px;
+}

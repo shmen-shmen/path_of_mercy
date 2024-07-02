@@ -1,4 +1,3 @@
-import "./App.css";
 import "normalize.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import NavbarComponent from "./components/NavbarComponent";
