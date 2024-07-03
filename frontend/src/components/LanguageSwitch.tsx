@@ -9,15 +9,15 @@ export function LanguageSwitch(): JSX.Element {
 		{ key: "RU", label: "Русский" },
 	];
 	return (
-		<ButtonGroup size="sm">
+		<ButtonGroup id="languageSwitch" size="sm">
 			{languages.map(({ key, label }) => {
 				return (
 					<ToggleButton
 						key={key + "-selector"}
-						className={`btn-xs fs-7 btn-outline-primary bg-${
-							radioValue === key ? "primary" : "transparent"
-						}`}
-						id={"langToggle" + key}
+						className={`btn__language${
+							radioValue === key ? "_checked" : ""
+						} text-primary bg-transparent border-0 p-0 me-2`}
+						id={`langToggle-${key}`}
 						type="radio"
 						name="radio"
 						value={key}

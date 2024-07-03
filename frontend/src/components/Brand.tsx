@@ -1,19 +1,22 @@
-import { Navbar } from "react-bootstrap";
+import { Navbar, Image } from "react-bootstrap";
 
-function Brand() {
+export function Brand() {
 	return (
 		<Navbar.Brand
-			className="d-flex flex-row align-items-stretch js gap-2 bg-"
+			id="brand"
+			className="d-flex flex-row align-items-stretch gap-2"
 			href="#home"
 		>
-			<img alt="brand logo" src="/logo-round.png" width="120" height="120" />
-			<div className="d-flex flex-column align-items-start justify-content-center">
-				<div className="text-primary fs-5">Частный</div>
-				<div className="text-primary fs-5">Благотворительный</div>
-				<div className="text-primary fs-5">Фонд</div>
+			<Image alt="brand logo" src="/logo-round.png" width="150" height="150" />
+			<div className="d-flex flex-column align-items-start justify-content-around">
+				<h1 className="fw-bold fs-4 mb-0">
+					ПУТЬ <br />
+					МИЛОСЕРДИЯ
+				</h1>
+				<div>Частный</div>
+				<div>Благотворительный</div>
+				<div>Фонд</div>
 			</div>
 		</Navbar.Brand>
 	);
 }
-
-export default Brand;
