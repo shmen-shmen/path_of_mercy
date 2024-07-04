@@ -13,7 +13,7 @@ export function HelpFast() {
 				height="110"
 				className="border border-4 border-success"
 			/>
-			<Button variant="success" className="p-1 border-0">
+			<Button variant="success" className=" border-0 p-1 mb-1">
 				Помочь
 			</Button>
 		</div>

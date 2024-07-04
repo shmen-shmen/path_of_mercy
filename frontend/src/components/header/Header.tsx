@@ -16,7 +16,7 @@ function Header() {
 	return (
 		<header className="bg-success-subtle text-success">
 			<div className="container-fluid py-0 border-success border-bottom border-4 ">
-				<div className="header-row row justify-content-center align-items-stretch">
+				<div className="header-row row justify-content-center align-items-stretch mb-0">
 					<HeaderElement>
 						<Brand />
 					</HeaderElement>

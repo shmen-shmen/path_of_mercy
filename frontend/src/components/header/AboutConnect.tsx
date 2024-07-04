@@ -5,7 +5,7 @@ export function AboutConnect() {
 	return (
 		<div
 			id="about"
-			className="d-flex flex-column align-items-start justify-content-between  h-100"
+			className="d-flex flex-column align-items-start justify-content-between h-100"
 		>
 			<LanguageSwitch></LanguageSwitch>
 			<div id="phoneNumber" className="text-success">
