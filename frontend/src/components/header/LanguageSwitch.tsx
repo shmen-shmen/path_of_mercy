@@ -1,6 +1,6 @@
 import { ButtonGroup, ToggleButton } from "react-bootstrap";
 import { useState } from "react";
-import "./NavbarComponent.css";
+import "./Header.css";
 
 export function LanguageSwitch(): JSX.Element {
 	const [radioValue, setRadioValue] = useState<string>("RU");

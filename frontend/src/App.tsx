@@ -1,13 +1,13 @@
 import "normalize.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import NavbarComponent from "./components/NavbarComponent";
+import { Main } from "./components/main/Main.tsx";
 import Header from "./components/header/Header.tsx";
 
 function App() {
 	return (
 		<>
 			<Header></Header>
-			{/* <NavbarComponent></NavbarComponent> */}
+			<Main></Main>
 		</>
 	);
 }

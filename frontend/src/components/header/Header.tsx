@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import "./NavbarComponent.css";
+import "./Header.css";
 import { Brand } from "./Brand";
 import { AboutConnect } from "./AboutConnect";
 import { HelpFast } from "./HelpFast";

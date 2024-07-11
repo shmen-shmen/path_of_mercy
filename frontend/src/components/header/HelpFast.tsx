@@ -11,7 +11,7 @@ export function HelpFast() {
 				rounded
 				width="110"
 				height="110"
-				className="border border-4 border-success"
+				className="border border-4 border-white"
 			/>
 			<Button variant="success" className=" border-0 p-1 mb-1">
 				Помочь
