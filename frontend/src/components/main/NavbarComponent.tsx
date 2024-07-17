@@ -13,16 +13,21 @@ function NavbarComponent() {
 	const currentPath = location.pathname;
 
 	return (
-		<Nav fill variant="pills" defaultActiveKey={currentPath}>
+		<Nav
+			fill
+			variant="pills"
+			defaultActiveKey={currentPath}
+			className="justify-content-center"
+		>
 			{destinations.map((dest) => {
 				const path = "/" + dest.path;
 				const active = currentPath === "/" + dest.path;
 				return (
-					<Nav.Item key={dest.path}>
+					<Nav.Item key={dest.path} className="flex-grow-1">
 						<Nav.Link
 							as={Link}
 							to={path}
-							className={`fs-5  ${
+							className={`fs-5 ${
 								active
 									? "active bg-success-subtle fw-bold text-success"
 									: "text-success "
