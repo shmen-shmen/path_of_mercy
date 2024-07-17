@@ -1,28 +1,38 @@
 import Nav from "react-bootstrap/Nav";
+import { useLocation, Link } from "react-router-dom";
+import "./main.css";
 
 function NavbarComponent() {
+	const destinations = [
+		{ path: "news", name: "Новости" },
+		{ path: "theyNeedHelp", name: "Им нужна помощь" },
+		{ path: "weHelpedThem", name: "Кому мы помогли" },
+		{ path: "aboutUs", name: "О Фонде" },
+	];
+	const location = useLocation();
+	const currentPath = location.pathname;
+
 	return (
-		<Nav justify variant="tabs" defaultActiveKey="/home">
-			<Nav.Item>
-				<Nav.Link href="/News" className="fs-5">
-					Новости
-				</Nav.Link>
-			</Nav.Item>
-			<Nav.Item>
-				<Nav.Link href="/TheyNeedHelp" className="fs-5">
-					Им нужна помощь
-				</Nav.Link>
-			</Nav.Item>
-			<Nav.Item>
-				<Nav.Link href="/WeHelpedThem" className="fs-5">
-					Кому Мы помогли
-				</Nav.Link>
-			</Nav.Item>
-			<Nav.Item>
-				<Nav.Link href="/AboutUs" className="fs-5">
-					О Фонде
-				</Nav.Link>
-			</Nav.Item>
+		<Nav fill variant="pills" defaultActiveKey={currentPath}>
+			{destinations.map((dest) => {
+				const path = "/" + dest.path;
+				const active = currentPath === "/" + dest.path;
+				return (
+					<Nav.Item key={dest.path}>
+						<Nav.Link
+							as={Link}
+							to={path}
+							className={`fs-5  ${
+								active
+									? "active bg-success-subtle fw-bold text-success"
+									: "text-success "
+							}`}
+						>
+							{dest.name}
+						</Nav.Link>
+					</Nav.Item>
+				);
+			})}
 		</Nav>
 	);
 }
