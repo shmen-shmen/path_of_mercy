@@ -5,8 +5,9 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/error-page.tsx";
 
+import { News } from "./components/main/News.tsx";
+
 import {
-	News,
 	WeHelpedThem,
 	TheyNeedHelp,
 	AboutUs,
