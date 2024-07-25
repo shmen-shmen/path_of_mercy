@@ -4,76 +4,33 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import {
+	genereateNumberOfArticles,
+	NewsArticle,
+} from "../../assets/staticData";
+
+const articles = genereateNumberOfArticles(2, 5);
+
+const ArticleCard = (data: NewsArticle) => {
+	const { articleDate, articleHeader, articleHeaderImg, articleBodyText } =
+		data;
+	return (
+		<Card key={articleDate}>
+			<Card.Img variant="top" src={articleHeaderImg} />
+			<Card.Body>
+				<Card.Title>{articleHeader}</Card.Title>
+				<Card.Text>{articleBodyText}</Card.Text>
+				<Button variant="primary">Go somewhere</Button>
+			</Card.Body>
+		</Card>
+	);
+};
 
 const Grid = () => {
 	return (
 		<Container fluid>
 			<Row className="row-cols-1 row-cols-lg-2 g-4">
-				<Col>
-					<Card>
-						<Card.Img variant="top" src="holder.js/100px180" />
-						<Card.Body>
-							<Card.Title>Card Title</Card.Title>
-							<Card.Text>
-								Some quick example text to build on the card title and make up
-								the bulk of the card's content.
-							</Card.Text>
-							<Button variant="primary">Go somewhere</Button>
-						</Card.Body>
-					</Card>
-				</Col>
-				<Col>
-					<Card>
-						<Card.Img variant="top" src="holder.js/100px180" />
-						<Card.Body>
-							<Card.Title>Card Title</Card.Title>
-							<Card.Text>
-								Some quick example text to build on the card title and make up
-								the bulk of the card's content.
-							</Card.Text>
-							<Button variant="primary">Go somewhere</Button>
-						</Card.Body>
-					</Card>
-				</Col>
-				<Col>
-					<Card>
-						<Card.Img variant="top" src="holder.js/100px180" />
-						<Card.Body>
-							<Card.Title>Card Title</Card.Title>
-							<Card.Text>
-								Some quick example text to build on the card title and make up
-								the bulk of the card's content.
-							</Card.Text>
-							<Button variant="primary">Go somewhere</Button>
-						</Card.Body>
-					</Card>
-				</Col>
-				<Col>
-					<Card>
-						<Card.Img variant="top" src="holder.js/100px180" />
-						<Card.Body>
-							<Card.Title>Card Title</Card.Title>
-							<Card.Text>
-								Some quick example text to build on the card title and make up
-								the bulk of the card's content.
-							</Card.Text>
-							<Button variant="primary">Go somewhere</Button>
-						</Card.Body>
-					</Card>
-				</Col>
-				<Col>
-					<Card>
-						<Card.Img variant="top" src="holder.js/100px180" />
-						<Card.Body>
-							<Card.Title>Card Title</Card.Title>
-							<Card.Text>
-								Some quick example text to build on the card title and make up
-								the bulk of the card's content.
-							</Card.Text>
-							<Button variant="primary">Go somewhere</Button>
-						</Card.Body>
-					</Card>
-				</Col>
+				<Col>{articles.map((x) => ArticleCard(x))}</Col>
 			</Row>
 		</Container>
 	);
