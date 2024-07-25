@@ -42,7 +42,7 @@ function createRandomNewsArticle(): NewsArticle {
 	};
 }
 
-export function genereateNumberOfArticles(
+export function generateNumberOfArticles(
 	min: number,
 	max: number
 ): NewsArticle[] {
